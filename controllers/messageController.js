@@ -62,7 +62,7 @@ const newNote = asyncHandler(async (req, res) => {
         throw new Error("Complete all the required fields");
     }
 
-    if(req.body.message.length > 1000 || req.body.codeName > 100){
+    if(req.body.message.length > 1000 || req.body.codeName.length > 100){
         res.status(400);
         throw new Error("Message too long")
     }
@@ -144,9 +144,8 @@ const testNewNote = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("Complete all the required fields");
     }
-    if(req.body.message.length > 1000 || req.body.codeName > 100){
+    if(req.body.message.length > 1000 || req.body.codeName.length > 100){
         res.status(400);
-        console.log("Message too long")
         throw new Error("Message too long")
     }    
     try {
