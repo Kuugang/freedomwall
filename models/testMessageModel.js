@@ -3,12 +3,12 @@ const mongoose = require("mongoose")
 const appSchema = mongoose.Schema({
     codeName: {
         type: String,
-        maxlength: 100,
+        maxLength: 100,
         required: true
     },
     message: {
         type: String,
-        maxlength: 1000,
+        maxLength: 1000,
         required: true,
     },
     img : { 
